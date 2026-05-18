@@ -519,7 +519,7 @@ tmux new-session -s dev
 
 **Auto-enable:** `/config` → toggle "Remote Control: auto-enable"
 
-**Full doc**: [§9.22 Remote Control](ultimate-guide.md#922-remote-control-mobile-access) | [Security notes](security-hardening.md#remote-control-security)
+**Full doc**: [§9.22 Remote Control](ultimate-guide.md#922-remote-control-mobile-access) | [Security notes](security/security-hardening.md#remote-control-security)
 
 ---
 
@@ -565,7 +565,7 @@ For `description`/`metadata` → use `TaskGet(taskId)` per task.
 CLAUDE_CODE_ENABLE_TASKS=false claude
 ```
 
-**→ Full workflow**: [guide/workflows/task-management.md](../workflows/task-management.md)
+**→ Full workflow**: [guide/workflows/task-management.md](workflows/task-management.md)
 
 ---
 
