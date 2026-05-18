@@ -55,3 +55,34 @@ jobs:
           labels: |
             bug
             broken-links
+
+      - name: Check internal file links in guide markdown
+        id: mlc
+        run: |
+          npm install -g markdown-link-check --quiet 2>/dev/null
+          REPORT="./mlc-report.md"
+          EXIT_CODE=0
+          echo "## Broken internal file links" > "$REPORT"
+          echo "" >> "$REPORT"
+          while IFS= read -r -d '' FILE; do
+            OUTPUT=$(markdown-link-check --config .mlc-config.json --quiet "$FILE" 2>&1) || {
+              EXIT_CODE=1
+              echo "### $FILE" >> "$REPORT"
+              echo '```' >> "$REPORT"
+              echo "$OUTPUT" >> "$REPORT"
+              echo '```' >> "$REPORT"
+              echo "" >> "$REPORT"
+            }
+          done < <(find ./guide ./examples -name "*.md" -print0)
+          echo "exit_code=$EXIT_CODE" >> "$GITHUB_OUTPUT"
+        continue-on-error: true
+
+      - name: Create issue on broken internal links
+        if: steps.mlc.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: "Broken internal file links in guide markdown"
+          content-filepath: ./mlc-report.md
+          labels: |
+            bug
+            broken-links
