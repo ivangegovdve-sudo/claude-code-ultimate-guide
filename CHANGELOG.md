@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+---
+
+## [3.41.0] - 2026-05-27
+
 ### Security
 
 - **Threat Database v2.19.0** (`examples/commands/resources/threat-db.yaml`, 2026-05-27): 6 new CVEs, 1 new campaign, 2 new scanning tools
