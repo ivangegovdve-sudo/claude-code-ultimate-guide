@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Security
+
+- **Threat Database v2.19.0** (`examples/commands/resources/threat-db.yaml`, 2026-05-27): 6 new CVEs, 1 new campaign, 2 new scanning tools
+  - CVE-2026-44112/44113/44115/44118 (OpenClaw "Claw Chain": TOCTOU sandbox escape chain, CVSS up to 9.6, fixed in OpenClaw 2026.4.22; 65K-180K servers exposed)
+  - CVE-2026-20205 (Splunk MCP Server token disclosure in _internal index logs, CVSS 7.2, fixed in 1.0.3)
+  - CVE-2026-2256 (MS-Agent v1.5.2 by ModelScope, regex blacklist bypass in Shell tool enables critical RCE via prompt injection)
+  - New campaign: Claw Chain (four chained OpenClaw CVEs for data theft + privilege escalation + persistence)
+  - New scanning tools: Aguara (189-rule 100% offline static scanner, GitHub garagon/aguara) and SkillRisk (free browser-based scanner)
+  - Updated `minimum_safe_versions`: openclaw bumped from 2026.1.29 to 2026.4.22
+  - 8 new sources added
+
 ### Documentation
 
 - **Claude Code Releases**: Updated tracking from v2.1.150 to v2.1.152 (2026-05-27)
@@ -16,6 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   - 35+ bug fixes
 
 ### Added
+
+- **stacklit, scip-search, lilmd** (`guide/ecosystem/context-engineering-tools.md`, `guide/workflows/search-tools-mastery.md`, 2026-05-27): Three community CLI tools added to the guide. stacklit generates a machine-readable repo index (~250 tokens vs 50K+ for manual exploration) and auto-configures Claude Code/Cursor/Aider; documented in context-engineering-tools.md section 3 alongside RTK/context-mode. scip-search queries pre-built SCIP symbol indexes with millisecond cold starts, no MCP required, worktree-compatible; positioned as a stateless alternative to Serena for CI and ephemeral environments. lilmd provides Markdown TOC with inclusive line ranges for targeted section reads, filling a gap in documentation navigation. Both scip-search and lilmd added to search-tools-mastery.md with decision tree, setup priority, and a new Extended Toolkit section; title updated from "4-Tool Symphony" to "6-Tool Toolkit".
 
 - **Section 2.10 Prompt Engineering Patterns** (`guide/ultimate-guide.md`, new `## 2.10`): Four techniques for closing the gap between well-structured prompts and reliably accurate outputs. Few-shot prompting: message-pair format for tool-use tasks, null-handling example strategy, false-positive calibration with near-miss examples, limits of few-shot vs schema constraints. Validation retry loop: three-attempt budget with per-field error feedback, hallucination cycle detection (`is_hallucination_cycle`), graceful degradation to human review queue. Self-review contamination: 15-30% self-preference bias, independent review instance pattern for high-stakes extraction. Inline reasoning for triage: `reasoning` field in output schema as verification handle, vague reasoning as escalation signal.
 
