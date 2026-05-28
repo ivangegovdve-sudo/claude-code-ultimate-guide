@@ -3,8 +3,8 @@
 # Purpose: Track Claude Code product releases for documentation sync
 # Maintained: Manual updates when new releases are announced
 
-latest: "2.1.152"
-updated: "2026-05-27"
+latest: "2.1.153"
+updated: "2026-05-28"
 
 # ════════════════════════════════════════════════════════════════
 # RELEASES (newest first, condensed highlights only)
@@ -14,6 +14,15 @@ releases:
   # ─────────────────────────────────────────────────────────────
   # 2.1.x Series (January-May 2026)
   # ─────────────────────────────────────────────────────────────
+
+  - version: "2.1.153"
+    date: "2026-05-28"
+    highlights:
+      - "⭐ `/model` now saves as default for new sessions (IDE parity); `s` in picker = current session only — reverses 2.1.144 behavior"
+      - "`skipLfs` for plugin marketplace git sources; status line commands get `COLUMNS`/`LINES` env vars; `claude agents` autocomplete includes built-in skills + slash commands; PR column shows `PR #N` / `N PRs`"
+      - "25+ bug fixes: stateful MCP reconnect loop (regression 2.1.147), API gateway credential leak, subagent MCP ignoring enterprise policies, `Agent` tool worktree silently discarding outputs, Windows installer false success"
+    breaking:
+      - "`modelPicker:setAsDefault` keybinding renamed to `modelPicker:thisSessionOnly` in keybindings.json"
 
   - version: "2.1.152"
     date: "2026-05-27"
@@ -1245,6 +1254,7 @@ breaking_summary:
     - "Minimum zod peer dependency: ^4.0.0 (v2.1.0)"
   shortcuts:
     - "Removed # shortcut for quick memory (v2.0.70)"
+    - "`modelPicker:setAsDefault` keybinding renamed to `modelPicker:thisSessionOnly` (v2.1.153)"
   security:
     - "Command injection fix in bash processing (v2.1.2)"
     - "Wildcard permission rules compound commands fix (v2.1.7)"
