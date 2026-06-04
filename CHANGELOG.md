@@ -8,6 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Documentation
 
+- **Hooks and skills documentation pass 2** (`guide/ultimate-guide.md`, `machine-readable/reference.yaml`): corrected `Setup` event description (was "environment setup phase at session start", fires only with `--init-only`/`--init`/`--maintenance` in `-p` mode); corrected async hooks limitation (guide incorrectly stated they cannot return `additionalContext`, they can); added `agent_id`/`agent_type` to common input fields table; added `CLAUDE_ENV_FILE` section for SessionStart/Setup/CwdChanged/FileChanged; added Per-Event Reference table covering all 30 events with specific input/output fields; added `model` and `hooks:` to skills frontmatter table; added deprecation notice for `.claude/commands/` (merged into `.claude/skills/` since v2.1.3); updated Common Patterns table to say "Skill (user-invocable)" instead of "Command"; fixed em dash in HumanLayer source link; corrected `MessageDisplay` description and `hooks_async_limitations` in reference.yaml; added `skill_frontmatter_fields` block to reference.yaml.
+
 - **Claude Code Releases**: Updated tracking to v2.1.162 (2026-06-04)
   - v2.1.162: Quieter startup, `claude agents --json` waitingFor, slash-command fill-in, Windsurf renamed Devin Desktop, 25+ bug fixes
   - v2.1.161: OTEL custom dimensions, agents done/total, /mcp unused connectors collapsed, parallel tool-call isolation, 20+ bug fixes
