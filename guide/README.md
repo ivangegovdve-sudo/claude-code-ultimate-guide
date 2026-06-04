@@ -39,7 +39,8 @@ Core documentation for mastering Claude Code, organized by topic.
 | [core/known-issues.md](./core/known-issues.md) | **Critical bugs tracker**: security issues, token consumption, verified community reports | 15 min |
 | [core/context-engineering.md](./core/context-engineering.md) | **Context Engineering**: token budget, modular architecture, team assembly, ACE pipeline, quality measurement | 25 min |
 | [core/memory-systems.md](./core/memory-systems.md) | **Memory Systems**: native stack (CLAUDE.md, Auto Memory, Auto Dream), cross-session tools (claude-mem, agentmemory, ICM), team sharing, multi-agent patterns, architecture, risks, decision flowchart | 30 min |
-| [core/glossary.md](./core/glossary.md) | **Glossary**: alphabetical reference for Claude Code terms, community patterns, and AI engineering concepts | 10 min |
+| [core/glossary.md](./core/glossary.md) | **Glossary**: official Claude Code terminology (31 terms, paragraph format, with links to guide sections) | 5 min |
+| [core/community-patterns.md](./core/community-patterns.md) | **Community Patterns**: ~130 community-coined patterns, workflow terms, AI engineering concepts, and quick-reference definitions | 10 min |
 | [diagrams/](./diagrams/) | **Visual Diagrams Series**: 41 Mermaid interactive diagrams for model selection, agent lifecycle, security, multi-agent patterns | 15 min |
 
 ---
