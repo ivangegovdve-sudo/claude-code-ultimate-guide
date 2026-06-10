@@ -8,6 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Added
 
+- **Search index: GDPR/Privacy and Governance sections** (`machine-readable/reference.yaml`): added 16 `data_privacy_*` entries covering data flow, retention tiers (5y/30d/ZDR), known risks (`/bug` command, `.env` exposure, MCP DB), protective measures, and GDPR/HIPAA/PCI compliance. Governance and privacy sections are now searchable via cmd+k on the landing site and link to the local guide reader at `cc.bruniaux.com/guide/`.
+
 - **Section 9.26 Review-Driven Context Optimization** (`guide/ultimate-guide.md`): new advanced pattern covering how to convert structured inline review feedback (via tools like [crit](https://github.com/tomasz-tomczyk/crit)) into CLAUDE.md rules. Covers the round-to-round diff as a verification mechanism, pattern extraction from review comment threads, promotion criteria, and the compounding effect over multiple sessions. Cross-referenced with §9.24 (Instinct-Based Learning) and §9.23 (Update Loop). Added to chapter 9 quick jump and ToC.
 - **Resource evaluation: crit** (`docs/resource-evaluations/crit-human-in-loop-review.md`): score 4/5, decision: integrate. Tool by tomasz-tomczyk for human-in-the-loop review with round-to-round diffing, inline plan review before execution, DOM-anchored web app comments, and native Claude Code integration.
 
