@@ -8,10 +8,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Documentation
 
-- **Claude Code Releases**: Updated tracking to v2.1.176
+- **Claude Code Releases**: Updated tracking to v2.1.179
   - v2.1.174: `wheelScrollAccelerationEnabled` setting, `/model` picker Default model family fix, VS Code usage attribution per-skill/agent/plugin/MCP, 8+ bug fixes (Bedrock GovCloud prefix, background session env inheritance, Fable 5 billing banner)
   - v2.1.175: `enforceAvailableModels` managed setting: constrains Default model to allowlist, blocks user/project settings from widening managed list
   - v2.1.176: session titles in conversation language + `language` setting, `footerLinksRegexes` setting, Bedrock credential caching until Expiration, 15+ bug fixes (availableModels alias enforcement, Fable 5 auto mode fallback, hook `if` path conditions, Linux sandbox symlink, tmux clipboard, Remote Control)
+  - v2.1.178: `Tool(param:value)` permission syntax, nested `.claude/` directory improvements, auto mode subagent pre-classification, improved `/doctor`, 10+ bug fixes (subagent transcript, compaction fallback model, MCP disallowedTools server-level specs, vim undo)
+  - v2.1.179: fixed mid-stream connection drops, WSL2 mouse-wheel scroll regression (2.1.172), sandbox denyRead/allowRead glob performance, feedback survey capture, welcome banner stacking, 4+ more fixes
 
 ### Added
 

@@ -3,8 +3,8 @@
 # Purpose: Track Claude Code product releases for documentation sync
 # Maintained: Manual updates when new releases are announced
 
-latest: "2.1.176"
-updated: "2026-06-15"
+latest: "2.1.179"
+updated: "2026-06-17"
 
 # ════════════════════════════════════════════════════════════════
 # RELEASES (newest first, condensed highlights only)
@@ -14,6 +14,21 @@ releases:
   # ─────────────────────────────────────────────────────────────
   # 2.1.x Series (January-June 2026)
   # ─────────────────────────────────────────────────────────────
+
+  - version: "2.1.179"
+    date: "2026-06-17"
+    highlights:
+      - "Fixed mid-stream connection drops: partial responses preserved instead of raw error, spinner no longer stuck at 'running tool'"
+      - "Fixed WSL2 mouse-wheel scrolling in Windows Terminal and VS Code (regression in 2.1.172)"
+      - "6+ bug fixes: sandbox denyRead/allowRead glob performance, feedback survey rating, welcome banner stacking, Ctrl+O subagent transcript, prompt input focus, remote session plugin loading"
+
+  - version: "2.1.178"
+    date: "2026-06-17"
+    highlights:
+      - "⭐ `Tool(param:value)` syntax for permission rules to match tool input parameters (with `*` wildcard), e.g. `Agent(model:opus)` to block Opus subagents"
+      - "Nested `.claude/skills` improvements: directory-qualified names on clash, closest `.claude/` wins for agents/workflows/output-styles, project-scope workflow saves target closest directory"
+      - "Improved auto mode: subagent spawns evaluated by classifier before launch, closing gap where subagent could request blocked actions without review"
+      - "10+ bug fixes: subagent transcript visibility, nested skill permissions, compaction fallback model, stale credential cache, background sessions stuck 'Working', MCP disallowedTools for server-level specs"
 
   - version: "2.1.176"
     date: "2026-06-15"
