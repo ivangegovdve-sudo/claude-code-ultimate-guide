@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Fixed
+
+- **Security: shell injection in `claude-issue-triage.yml`** (`examples/github-actions/claude-issue-triage.yml`): `github.event.issue.title` and `github.event.issue.body` were interpolated directly into shell via `${{ }}`, allowing an attacker to inject arbitrary commands by crafting a malicious issue title. Fixed by moving both values to step-level `env:` (`ISSUE_TITLE`, `ISSUE_BODY`) and referencing them as plain shell variables, so GitHub Actions never interpolates user content into the script text. Reported in issue #50.
+
 ### Documentation
 
 - **Claude Code Releases**: Updated tracking to v2.1.181
