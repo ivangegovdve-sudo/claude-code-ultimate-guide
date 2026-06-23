@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Changed
+
+- **data-privacy.md** (`guide/security/data-privacy.md`): reframed around CLI-specific risks for practitioners. Removed policy-paraphrase sections (retention tiers, Constitutional AI, IP considerations). Enriched the `/bug` command section with live verification commands and clarification that session context is included without scrubbing. Added a 7-point Quick Audit Checklist with runnable shell commands (training opt-out, bug command, env file blocking, native messaging host, MCP inventory, telemetry vars, env secret exposure). Section numbering updated throughout.
+
 ### Documentation
 
 - **Claude Code Releases**: Updated tracking to v2.1.186
