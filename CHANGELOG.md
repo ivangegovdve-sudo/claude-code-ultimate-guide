@@ -8,8 +8,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Documentation
 
-- **Claude Code Releases**: Updated tracking to v2.1.185
-  - Improved stream-stall hint: clearer "Waiting for API response · will retry in …" message (was "No response from API · Retrying in …") and 20s silence trigger (was 10s)
+- **Claude Code Releases**: Updated tracking to v2.1.186
+  - ⭐ `claude mcp login/logout <name>` authenticates MCP servers from the CLI without the interactive `/mcp` menu; `--no-browser` flag for SSH sessions
+  - `!` bash commands now auto-trigger Claude to respond to output; opt-out via `"respondToBashCommands": false`
+  - Background subagents surface permission prompts in main session instead of auto-denying
+  - Fixed `Agent(type)` deny rules not enforced for named subagent spawns; 25+ bug fixes
 
 ### Added
 
